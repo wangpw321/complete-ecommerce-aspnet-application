@@ -18,16 +18,16 @@ namespace eTickets.Data.ViewModels
 
         [Required]
         [DataType(DataType.Password)]
-        [RegularExpression(@"(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W){6,}",
-            ErrorMessage = "Password must contain uppercase, lower case and symbol characters, and be at least 6 characters.")]
+        //[RegularExpression(@"(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W){6,}",
+        //    ErrorMessage = "Password must contain uppercase, lower case and symbol characters, and be at least 6 characters.")]
         public string Password { get; set; }
 
         [Display(Name ="Confirm Password")]
         [Required(ErrorMessage ="Confirm password is required")]
         [DataType(DataType.Password)]
         [Compare("Password",ErrorMessage ="Passwords do not match")]
-        [RegularExpression(@"(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W){6,}",
-            ErrorMessage = "Password must contain uppercase, lower case, symbol characters, and be at least 6 characters.")]
+        //[RegularExpression(@"(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W){6,}",
+        //    ErrorMessage = "Password must contain uppercase, lower case, symbol characters, and be at least 6 characters.")]
         public string ConfirmPassword { get; set; }
     }
 }

@@ -85,11 +85,11 @@ namespace eTickets.Controllers
 
                 if (newUserResponse.Succeeded)
                     await _userManager.AddToRoleAsync(newUser, UserRoles.User);
-                //else 
-                //{
-                //    TempData["Error"] = "Password length must be at least 6 and containing: Uppercase, Lowercase, and Symbol!";
-                //    return View(registerVM);
-                //}
+                else
+                {
+                    TempData["Error"] = "Password length must be at least 6 and containing: Uppercase, Lowercase, and Symbol!";
+                    return View(registerVM);
+                }
 
 
                 return View("RegisterCompleted");
